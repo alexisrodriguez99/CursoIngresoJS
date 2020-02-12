@@ -13,6 +13,7 @@ function mostrar()
 	while(respuesta!='no')
 	{
 		numero=prompt("elija un numero, sin miedo, usted puede GANBARUUUUU");
+		numero=parseInt(numero);
 		if (contador==0)
 		{
 			numeroMayor=numero;
