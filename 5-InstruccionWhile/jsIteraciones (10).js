@@ -8,12 +8,12 @@ function mostrar()
 	var negativo=0;
 	var positivo=0;
 	var diferencia;
-	var promedioPositivos;
-	var promedioNegativos;
+	var promedioPositivos=0;
+	var promedioNegativos=0;
 	var resto=0;
 	var parPositivo=0;
 	var parNegativo=0;
-	var pares;
+	var pares=0;
 	//declarar contadores y variables 
 	
 	var respuesta="si";
@@ -26,10 +26,11 @@ function mostrar()
 		{
 			positivo=numero+positivo;
 			contadorPositivo=contadorPositivo+1;
-			resto=numero/2
+			resto=numero%2
 			if(resto==0)
 			{
 				parPositivo=parPositivo+1;
+				
 			}
 			
 		
@@ -38,7 +39,7 @@ function mostrar()
 		{
 			negativo=numero+negativo;
 			contadoNegativo=contadoNegativo+1;
-			resto=numero/2;
+			resto=numero%2;
 			if(resto==0);
 			{
 				parNegativo=parNegativo+1;
@@ -60,9 +61,9 @@ function mostrar()
 	alert("La suma de los negativos es: "+negativo);
 	alert("La suma de los positivos es: "+positivo);
 	alert("La cantidad de positivos es: "+contadorPositivo);
-	alert("La cantidad de negaticos es: "+contadoNegativo);
+	alert("La cantidad de negativos es: "+contadoNegativo);
 	alert("La cantidad de ceros es: "+contadorCero);
-	alert("La cantidad del promedio de los numeros positivos es: "+romedioPositivos);
+	alert("La cantidad del promedio de los numeros positivos es: "+promedioPositivos);
 	alert("La cantidad del promedio de los numeros negativos es: "+promedioNegativos);
 	alert("La cantidad de numeros pares es: "+pares);
 
