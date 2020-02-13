@@ -5,10 +5,11 @@ var clave = prompt("ingrese el número clave.");
 
 while(clave!="utn750")
 {
-    
-     prompt("ingrese el número clave.");
+
+    clave= prompt("Incorrecto, vuelva a ingresar el número clave.");
      
 }
+alert("La clave es correcta, :)")
 
     
 }//FIN DE LA FUNCIÓN

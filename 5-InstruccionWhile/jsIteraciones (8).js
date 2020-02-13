@@ -15,7 +15,7 @@ function mostrar()
 		{
 			positivo=positivo+numero;
 		}
-		else (numero<0) 
+		else if (numero<0) 
 		{
 			negativo=negativo*numero;
 		}

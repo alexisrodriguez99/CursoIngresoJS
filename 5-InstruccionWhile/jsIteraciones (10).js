@@ -57,15 +57,15 @@ function mostrar()
 	promedioNegativos=negativo/contadoNegativo;
 	pares=parPositivo+parNegativo;
 	
-	alert("La diferencia entre positivos y negativos es: "+diferencia);
-	alert("La suma de los negativos es: "+negativo);
-	alert("La suma de los positivos es: "+positivo);
-	alert("La cantidad de positivos es: "+contadorPositivo);
-	alert("La cantidad de negativos es: "+contadoNegativo);
-	alert("La cantidad de ceros es: "+contadorCero);
-	alert("La cantidad del promedio de los numeros positivos es: "+promedioPositivos);
-	alert("La cantidad del promedio de los numeros negativos es: "+promedioNegativos);
-	alert("La cantidad de numeros pares es: "+pares);
+	document.write("La diferencia entre positivos y negativos es: "+diferencia+"<br/>");
+	document.write("La suma de los negativos es: "+negativo+"<br/>");
+	document.write("La suma de los positivos es: "+positivo+"<br/>");
+	document.write("La cantidad de positivos es: "+contadorPositivo+"<br/>");
+	document.write("La cantidad de negativos es: "+contadoNegativo+"<br/>");
+	document.write("La cantidad de ceros es: "+contadorCero+"<br/>");
+	document.write("La cantidad del promedio de los numeros positivos es: "+promedioPositivos+"<br/>");
+	document.write("La cantidad del promedio de los numeros negativos es: "+promedioNegativos+"<br/>");
+	document.write("La cantidad de numeros pares es: "+pares);
 
 
 
