@@ -11,6 +11,10 @@ function mostrar()
 		
 		acumulador=prompt("elija un numero");
 		acumulador=parseInt(acumulador);
+		while(isNaN(acumulador))
+		{
+			acumulador=prompt("Eso no es un numero. Ingrese un numero")
+		}
 		suma=suma+acumulador;
 		contador=contador+1
 	}
