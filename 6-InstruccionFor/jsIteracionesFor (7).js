@@ -1,25 +1,42 @@
 function mostrar()
 {
 var id;
-var respuesta;
 var numero;
-var acumulador=0;
-for(id=1;id<99;id++)
+var resto;
+var contador=0;
+numero=prompt("Ingrese un numero");
+numero=parseInt(numero);
+id=parseInt(id);
+while(isNaN(numero))
 {
-    numero=prompt("Ingrese un numero");
-    numero=parseInt(numero);
-    
-    acumulador=acumulador+numero;
-    respuesta=prompt("Si desea continuar escriba 'si', caso contrario escriba otra cosa");
-    if(respuesta!="si")
-    {
-        alert("La suma de los numeros es: "+acumulador);
-        alert("El promedio de los numeros es: "+(acumulador/id));
-        break;
-    }
-
+    numero=parseInt(prompt("Eso no es un numero. Ingrese un numero"))
 }
 
+if(numero>=0)//no hace falta poner un if else ya que no hay un for que no cumple
+{
+    for(id=1;id<=numero;id++)
+    {
+    resto=numero%id;
+    if(resto==0)
+        {
+         alert(id+" es un numero divisor");
+         contador++;
+        }
+    }
+}
+else
+{
+    for(id=1;id>=numero;id--)
+{
+ resto=numero%id;
+ if(resto==0)
+ {
+     alert(id+" es un numero divisor");
+     contador++;
+ }
+}
+}
+alert("La cantidad de numero divisores son: "+contador);
 
 
 }//FIN DE LA FUNCIÓN
