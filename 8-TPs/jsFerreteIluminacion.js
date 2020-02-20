@@ -14,9 +14,81 @@ function CalcularPrecio ()
      var marca;
      var precioConDescuento;
      var precioLampara;
-     marca=document.getElementById("Marca").value;   
+    marca=document.getElementById("Marca").value;
      lamparas=document.getElementById("Cantidad").value;
      lamparas=parseInt(lamparas);
      precioLampara=lamparas*35;
-   
+     
+     if(lamparas>=6)
+     {
+          document.getElementById("precioDescuento").value=precioLampara-precioLampara*0.5;
+          precioConDescuento=precioLampara-precioLampara*0.5;
+          if(precioConDescuento>120)
+          {
+               alert("IIBB Usted pago $"+precioLampara*0.10);
+               
+          }
+     }
+
+     else if(lamparas==5)
+     {
+          switch (marca)
+          {
+               case "ArgentinaLuz":
+                    {
+                         document.getElementById("precioDescuento").value=precioLampara-precioLampara*0.4;
+                         break;
+                    }
+               
+               default:
+                    {
+                         document.getElementById("precioDescuento").value=precioLampara-precioLampara*0.3;
+                    }
+          }
+          precioConDescuento=precioLampara-precioLampara*0.3;
+          if(precioConDescuento>=120)
+          {
+               alert("IIBB usted pago $"+precioConDescuento*0.1);
+          }
+     }
+     else if (lamparas==4)
+     {
+          switch(marca)
+          {
+               case "ArgentinaLuz":
+               case "FelipeLamparas":
+                    {
+                         document.getElementById("precioDescuento").value=precioLampara-precioLampara*0.25;
+                         break;
+                    }
+               default:
+                    {
+                       document.getElementById("precioDescuento").value=precioLampara-precioLampara*0.20;  
+                    }
+          }
+     }
+     else if(lamparas==3)
+     {
+          switch(marca)
+          {
+               case "ArgentinaLuz":
+                    {
+                         document.getElementById("precioDescuento").value=precioLampara-precioLampara*0.15;
+                         break;
+                    }
+               case "FelipeLamparas":
+                    {
+                         document.getElementById("precioDescuento").value=precioLampara-precioLampara*0.10;
+                         break;
+                    }
+               default:
+                    {
+                         document.getElementById("precioDescuento").value=precioLampara-precioLampara*0.05;
+                    }
+          }
+     }
+     else if (lamparas==2 || lamparas==1 )
+     {
+          document.getElementById("precioDescuento").value=precioLampara;
+     }
 }
