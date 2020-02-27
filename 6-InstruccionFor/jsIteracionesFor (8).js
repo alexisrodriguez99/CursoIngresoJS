@@ -3,8 +3,9 @@ function mostrar()
 var id;
 var numero;
 var primo;
+var flag=0;
 numero=prompt("Ingrese un numerp");
-primo==true;
+
 
 for(id=2;id<numero;id++)
 {
@@ -12,11 +13,11 @@ for(id=2;id<numero;id++)
     if(numero%id==0)
     {
         
-        primo==false;
+        flag=1;
     }
 
 }
-if(primo==true)
+if(flag==0)
 {
     alert("El numero es primo");
 
@@ -28,3 +29,4 @@ else
 
 
 }//FIN DE LA FUNCIÓN
+
